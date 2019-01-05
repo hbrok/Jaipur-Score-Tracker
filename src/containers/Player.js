@@ -14,10 +14,8 @@ class Player extends Component {
 
     return (
       <div className="player">
-        {player.name}
-        <br />
-        Score: {player.score}
-        <br />
+        <div>{player.name}</div>
+        <div>Score: {player.score}</div>
         <Button
           text={this.isActivePlayer() ? "End Sell" : "Sell"}
           onClick={onClick}

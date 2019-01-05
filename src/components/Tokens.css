@@ -1,6 +1,5 @@
 .tokens-container {
-  margin: 0 auto;
-  max-width: 260px;
+  width: 100%;
 }
 
 .token-wrapper {

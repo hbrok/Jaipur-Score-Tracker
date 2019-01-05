@@ -1,8 +1,20 @@
 .player-container {
   display: flex;
-  margin: 1rem 0 3rem 0;
+  margin-top: auto;
 }
 
 .player {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  padding: 1rem;
   width: 50%;
+}
+
+.player * {
+  margin-bottom: 0.5rem;
+}
+
+.player *:last-child {
+  margin: 0;
 }
