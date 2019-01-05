@@ -10,7 +10,9 @@ const tokens = {
   bonus: {
     bonus3: [1, 1, 2, 2, 2, 3, 3],
     bonus4: [4, 4, 5, 5, 6, 6],
-    bonus5: [8, 8, 9, 10, 10],
+    bonus5: [8, 8, 9, 10, 10]
+  },
+  camel: {
     camel: [5]
   }
 };

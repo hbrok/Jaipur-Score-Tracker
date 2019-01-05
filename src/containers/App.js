@@ -69,16 +69,31 @@ class App extends Component {
         </header>
 
         <div className="tokens-container">
-          {Object.keys(this.state.tokens.goods).map(tokenName => {
-            return (
-              <Tokens
-                key={tokenName}
-                name={tokenName}
-                values={this.state.tokens.goods[tokenName]}
-                onClick={() => this.handleTokenButton(tokenName)}
-              />
-            );
-          })}
+          <div className="tokens-bonus" />
+
+          <div className="tokens-goods">
+            {Object.keys(this.state.tokens.goods).map(tokenName => {
+              return (
+                <Tokens
+                  key={tokenName}
+                  name={tokenName}
+                  values={this.state.tokens.goods[tokenName]}
+                  onClick={() => this.handleTokenButton(tokenName)}
+                />
+              );
+            })}
+
+            {Object.keys(this.state.tokens.bonus).map(tokenName => {
+              return (
+                <Tokens
+                  key={tokenName}
+                  name={tokenName}
+                  values={this.state.tokens.bonus[tokenName]}
+                  onClick={() => this.handleTokenButton(tokenName)}
+                />
+              );
+            })}
+          </div>
         </div>
 
         <div className="player-container">

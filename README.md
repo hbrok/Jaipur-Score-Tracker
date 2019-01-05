@@ -8,3 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Crown](https://thenounproject.com/term/crown/1840234/) by Janira Keana from the Noun Project
 - [towel](https://thenounproject.com/term/towel/810780/) by Geovani Almeida from the Noun Project
 - [sack](https://thenounproject.com/search/?q=spice&i=1007552) by Juraj Sedlák from the Noun Project
+- [Camel](https://thenounproject.com/term/camel/1985651/) by supalerk laipawat from the Noun Project
