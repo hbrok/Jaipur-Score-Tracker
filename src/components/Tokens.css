@@ -9,10 +9,6 @@
   margin: 0 0.25rem 1rem 0.25rem;
 }
 
-.token-wrapper.-disabled {
-  opacity: 0.4;
-}
-
 .token {
   width: 75px;
   height: 75px;
@@ -116,39 +112,6 @@
 .token-value.-bottom {
   left: 45%;
   bottom: 4px;
-}
-
-.token-count {
-  position: absolute;
-  display: inline-block;
-  padding: 0.25rem;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background-color: #c2c2c2;
-  text-align: center;
-  line-height: 1;
-}
-
-.token-count.-top {
-  top: 0;
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.token-count.-bottom {
-  bottom: 0;
-  right: 0;
-}
-
-.token.-small {
-  display: inline-block;
-  margin-right: -23px;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
 }
 
 svg {
