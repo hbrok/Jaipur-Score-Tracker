@@ -1,0 +1,159 @@
+.tokens-container {
+  margin: 0 auto;
+  max-width: 260px;
+}
+
+.token-wrapper {
+  height: 75px;
+  position: relative;
+  margin: 0 0.25rem 1rem 0.25rem;
+}
+
+.token-wrapper.-disabled {
+  opacity: 0.4;
+}
+
+.token {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  background-color: grey;
+  border-radius: 50%;
+  border: 0;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  -webkit-appearance: none;
+  box-shadow: -1px 0px 4px -1px rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+}
+
+.token:nth-child(1) {
+  position: absolute;
+}
+
+.token:nth-child(2) {
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+}
+
+.token:nth-child(3) {
+  position: absolute;
+  left: 40px;
+  z-index: 3;
+}
+
+.token:nth-child(4) {
+  position: absolute;
+  left: 60px;
+  z-index: 4;
+}
+
+.token:nth-child(5) {
+  position: absolute;
+  left: 80px;
+  z-index: 5;
+}
+
+.token:nth-child(6) {
+  position: absolute;
+  left: 100px;
+  z-index: 6;
+}
+
+.token:nth-child(7) {
+  position: absolute;
+  left: 120px;
+  z-index: 7;
+}
+
+.token.-diamond {
+  background-color: #b30c0c;
+}
+
+.token.-cloth {
+  background-color: #8a0a99;
+}
+
+.token.-silver {
+  background-color: #848393;
+}
+
+.token.-gold {
+  background-color: #c49d00;
+}
+
+.token.-spice {
+  background-color: #147732;
+}
+
+.token.-leather {
+  background-color: #87391f;
+}
+
+.token-value {
+  position: absolute;
+}
+
+.token-value.-left {
+  top: 43%;
+  left: 6px;
+  transform: rotate(90deg);
+}
+
+.token-value.-right {
+  top: 43%;
+  right: 6px;
+  transform: rotate(270deg);
+}
+
+.token-value.-top {
+  left: 45%;
+  top: 4px;
+  transform: rotate(180deg);
+}
+
+.token-value.-bottom {
+  left: 45%;
+  bottom: 4px;
+}
+
+.token-count {
+  position: absolute;
+  display: inline-block;
+  padding: 0.25rem;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  text-align: center;
+  line-height: 1;
+}
+
+.token-count.-top {
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.token-count.-bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.token.-small {
+  display: inline-block;
+  margin-right: -23px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+svg {
+  margin-top: 1rem;
+  width: 4em;
+  height: 4em;
+  fill: white;
+}
