@@ -114,9 +114,9 @@
   bottom: 4px;
 }
 
-svg {
-  margin-top: 1rem;
-  width: 4em;
-  height: 4em;
-  fill: white;
+.token svg {
+  margin-top: 1.4rem;
+  width: 2.75em;
+  height: 2.75em;
+  fill: #fff;
 }
