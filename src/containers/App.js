@@ -39,7 +39,7 @@ class App extends Component {
    *
    * @param {string} tokenName - Key of the token
    */
-  handleTokenButton(tokenName) {
+  handleTokenButton(tokensKey, tokenName) {
     const currentPlayer = this.state.currentPlayer;
 
     // If there is no active player, we want to skip this function.
@@ -48,17 +48,36 @@ class App extends Component {
     }
 
     let players = Object.assign([], this.state.players);
-    let tokens = Object.assign([], this.state.tokens);
+    let tokensObj = Object.assign([], this.state.tokens);
+    let tokens = tokensObj[tokensKey];
 
     // Pop first token off of token stack & set state
-    const tokenValue = tokens.goods[tokenName].pop();
+    const tokenValue = tokens[tokenName].pop();
 
     // Add token value to the active player's score.
     players[currentPlayer].score =
       players[currentPlayer].score + parseInt(tokenValue, 10);
 
     this.setState({ players });
-    this.setState({ tokens });
+    this.setState({ tokensObj });
+  }
+
+  /**
+   * Renders a row of tokens.
+   *
+   * @param {string} tokenType - Name of token type that matches the key in this.state.tokes
+   */
+  renderTokensRow(tokenType) {
+    return Object.keys(this.state.tokens[tokenType]).map(tokenName => {
+      return (
+        <Tokens
+          key={tokenName}
+          name={tokenName}
+          values={this.state.tokens[tokenType][tokenName]}
+          onClick={() => this.handleTokenButton(tokenType, tokenName)}
+        />
+      );
+    });
   }
 
   render() {
@@ -72,27 +91,9 @@ class App extends Component {
           <div className="tokens-bonus" />
 
           <div className="tokens-goods">
-            {Object.keys(this.state.tokens.goods).map(tokenName => {
-              return (
-                <Tokens
-                  key={tokenName}
-                  name={tokenName}
-                  values={this.state.tokens.goods[tokenName]}
-                  onClick={() => this.handleTokenButton(tokenName)}
-                />
-              );
-            })}
-
-            {Object.keys(this.state.tokens.bonus).map(tokenName => {
-              return (
-                <Tokens
-                  key={tokenName}
-                  name={tokenName}
-                  values={this.state.tokens.bonus[tokenName]}
-                  onClick={() => this.handleTokenButton(tokenName)}
-                />
-              );
-            })}
+            {this.renderTokensRow("goods")}
+            {this.renderTokensRow("bonus")}
+            {this.renderTokensRow("camel")}
           </div>
         </div>
 
