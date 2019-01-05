@@ -4,15 +4,11 @@ import Diamond from "icons/Diamond";
 
 class Token extends Component {
   renderTokens() {
-    const { name, values } = this.props;
+    const { name, values, onClick } = this.props;
 
     return values.map((value, i) => {
       return (
-        <div
-          key={i}
-          className={`token -${name}`}
-          // onClick={this.props.onClick ? () => onClick(face) : () => {}}
-        >
+        <div key={i} className={`token -${name}`} onClick={onClick}>
           {name}
 
           <div className="token-value -right">{value}</div>

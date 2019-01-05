@@ -1,7 +1,8 @@
 .player-container {
-    margin: 1rem 0 3rem 0;
+  display: flex;
+  margin: 1rem 0 3rem 0;
 }
 
-.player-container:first-child {
-    transform: rotate(180deg);
+.player {
+  width: 50%;
 }

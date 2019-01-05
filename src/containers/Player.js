@@ -4,32 +4,23 @@ import "./Player.css";
 import Button from "Button";
 
 class Player extends Component {
+  isActivePlayer() {
+    const { playerCount, activePlayer } = this.props;
+    return playerCount === activePlayer;
+  }
+
   render() {
-    const { player, playerCount } = this.props;
+    const { player, onClick } = this.props;
 
     return (
-      <div className="player-container">
-        {/* {this.props.children}
-
-        <div className="player-tokens">
-          {player.map(token => {
-            return (
-              <div className={`token -small -${token.face}`}>{token.value}</div>
-            );
-          })}
-        </div> */}
-
-        {/* {`Player ${this.state.currentPlayer + 1} Selling`}<br /> */}
+      <div className="player">
+        {player.name}
+        <br />
+        Score: {player.score}
+        <br />
         <Button
-          text={
-            this.state.currentPlayer === playerCount ? "End Sell" : "Start Sell"
-          }
-          onClick={
-            this.state.currentPlayer === playerCount
-              ? () => this.handleStartSellButton(playerCount)
-              : () => this.handleEndSellButton()
-          }
-          disabled={this.state.currentPlayer === playerCount}
+          text={this.isActivePlayer() ? "End Sell" : "Sell"}
+          onClick={onClick}
         />
       </div>
     );
