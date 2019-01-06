@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import tokens from "../data/tokens";
+import shuffle from "lodash/shuffle";
 
 import Tokens from "Tokens";
 import Player from "Player";
@@ -13,6 +14,11 @@ class App extends Component {
       { name: "Player 1", score: 0 },
       { name: "Player 2", score: 0 }
     ];
+
+    // Randomize bonus tokens.
+    tokens.bonus.bonus3 = shuffle(tokens.bonus.bonus3);
+    tokens.bonus.bonus4 = shuffle(tokens.bonus.bonus4);
+    tokens.bonus.bonus5 = shuffle(tokens.bonus.bonus5);
 
     this.state = {
       tokens,
