@@ -8,6 +8,15 @@
   margin: 0 0.25rem 1rem 0.25rem;
 }
 
+.tokens-bonus {
+  display: flex;
+  flex-direction: row;
+}
+
+.tokens-bonus .token-wrapper {
+  width: 25%;
+}
+
 .token {
   width: 75px;
   height: 75px;
@@ -22,56 +31,96 @@
   font-size: 11px;
 }
 
-.token:nth-child(1) {
+.tokens-goods .token:nth-child(1) {
   position: absolute;
 }
 
-.token:nth-child(2) {
+.tokens-goods .token:nth-child(2) {
   position: absolute;
   left: 20px;
   z-index: 2;
 }
 
-.token:nth-child(3) {
+.tokens-goods .token:nth-child(3) {
   position: absolute;
   left: 40px;
   z-index: 3;
 }
 
-.token:nth-child(4) {
+.tokens-goods .token:nth-child(4) {
   position: absolute;
   left: 60px;
   z-index: 4;
 }
 
-.token:nth-child(5) {
+.tokens-goods .token:nth-child(5) {
   position: absolute;
   left: 80px;
   z-index: 5;
 }
 
-.token:nth-child(6) {
+.tokens-goods .token:nth-child(6) {
   position: absolute;
   left: 100px;
   z-index: 6;
 }
 
-.token:nth-child(7) {
+.tokens-goods .token:nth-child(7) {
   position: absolute;
   left: 120px;
   z-index: 7;
 }
 
-.token:nth-child(8) {
+.tokens-goods .token:nth-child(8) {
   position: absolute;
   left: 140px;
   z-index: 8;
 }
 
-.token:nth-child(9) {
+.tokens-goods .token:nth-child(9) {
   position: absolute;
   left: 160px;
   z-index: 9;
+}
+
+.tokens-bonus .token:nth-child(1) {
+  position: absolute;
+}
+
+.tokens-bonus .token:nth-child(2) {
+  position: absolute;
+  left: 8px;
+  z-index: 2;
+}
+
+.tokens-bonus .token:nth-child(3) {
+  position: absolute;
+  left: 16px;
+  z-index: 3;
+}
+
+.tokens-bonus .token:nth-child(4) {
+  position: absolute;
+  left: 24px;
+  z-index: 4;
+}
+
+.tokens-bonus .token:nth-child(5) {
+  position: absolute;
+  left: 32px;
+  z-index: 5;
+}
+
+.tokens-bonus .token:nth-child(6) {
+  position: absolute;
+  left: 40px;
+  z-index: 6;
+}
+
+.tokens-bonus .token:nth-child(7) {
+  position: absolute;
+  left: 48px;
+  z-index: 7;
 }
 
 .token.-diamond {

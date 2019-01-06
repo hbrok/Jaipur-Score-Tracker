@@ -88,10 +88,9 @@ class App extends Component {
         </header>
 
         <div className="tokens-container">
-          <div className="tokens-bonus" />
+          <div className="tokens-goods">{this.renderTokensRow("goods")}</div>
 
-          <div className="tokens-goods">
-            {this.renderTokensRow("goods")}
+          <div className="tokens-bonus">
             {this.renderTokensRow("bonus")}
             {this.renderTokensRow("camel")}
           </div>
