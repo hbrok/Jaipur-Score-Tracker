@@ -3,8 +3,10 @@ import "./App.css";
 import tokens from "../data/tokens";
 import shuffle from "lodash/shuffle";
 
+import Button from "Button";
 import Tokens from "Tokens";
 import Player from "Player";
+import Trophy from "./../icons/Trophy";
 
 class App extends Component {
   constructor() {
@@ -23,7 +25,8 @@ class App extends Component {
     this.state = {
       tokens,
       players,
-      currentPlayer: null
+      currentPlayer: null,
+      showScore: false
     };
   }
 
@@ -68,6 +71,10 @@ class App extends Component {
     this.setState({ tokensObj });
   }
 
+  calculateScore() {
+    this.setState({ showScore: !this.state.showScore });
+  }
+
   /**
    * Renders a row of tokens.
    *
@@ -110,10 +117,18 @@ class App extends Component {
                 player={this.state.players[i]}
                 playerCount={i}
                 activePlayer={this.state.currentPlayer}
+                showScore={this.state.showScore}
                 onClick={() => this.handlePlayerActionButton(i)}
               />
             );
           })}
+        </div>
+
+        <div className="App-toolbar">
+          <Button onClick={() => this.calculateScore()}>
+            <Trophy />
+            {this.state.showScore ? "Hide Scores" : "Scores"}
+          </Button>
         </div>
       </div>
     );
