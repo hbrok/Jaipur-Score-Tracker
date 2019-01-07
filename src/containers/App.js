@@ -7,6 +7,7 @@ import Button from "Button";
 import Tokens from "Tokens";
 import Player from "Player";
 import Trophy from "./../icons/Trophy";
+import Refresh from "./../icons/Refresh";
 
 class App extends Component {
   constructor() {
@@ -77,6 +78,30 @@ class App extends Component {
     this.setState({ showScore: !this.state.showScore });
   }
 
+  resetGame() {
+    let players = cloneDeep(this.state.players);
+    let tokens = cloneDeep(startingTokens);
+
+    console.log(startingTokens);
+
+    players = players.map(player => {
+      player.score = 0;
+      return player;
+    });
+
+    // Randomize bonus tokens.
+    tokens.bonus.bonus3 = shuffle(tokens.bonus.bonus3);
+    tokens.bonus.bonus4 = shuffle(tokens.bonus.bonus4);
+    tokens.bonus.bonus5 = shuffle(tokens.bonus.bonus5);
+
+    this.setState({ players });
+    this.setState({ tokens });
+    this.setState({ currentPlayer: null });
+    this.setState({ showScore: false });
+
+    console.log(this);
+  }
+
   /**
    * Renders a row of tokens.
    *
@@ -130,6 +155,11 @@ class App extends Component {
           <Button onClick={() => this.calculateScore()}>
             <Trophy />
             {this.state.showScore ? "Hide Scores" : "Scores"}
+          </Button>
+
+          <Button onClick={() => this.resetGame()}>
+            <Refresh />
+            New Game
           </Button>
         </div>
       </div>
