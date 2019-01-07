@@ -3,11 +3,11 @@ import "./App.css";
 import startingTokens from "../data/tokens";
 import { cloneDeep, shuffle } from "lodash";
 
-import Button from "Button";
-import Tokens from "Tokens";
-import Player from "Player";
-import Trophy from "./../icons/Trophy";
-import Refresh from "./../icons/Refresh";
+import Button from "components/Button";
+import Tokens from "components/Tokens";
+import Player from "containers/Player";
+import Trophy from "icons/Trophy";
+import Refresh from "icons/Refresh";
 
 class App extends Component {
   constructor() {

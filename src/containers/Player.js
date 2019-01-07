@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Player.css";
 
-import Button from "Button";
+import Button from "components/Button";
 
 class Player extends Component {
   isActivePlayer() {

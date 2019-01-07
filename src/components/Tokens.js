@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "./Tokens.css";
 
-import Diamond from "./../icons/Diamond";
-import Cloth from "./../icons/Cloth";
-import Gold from "./../icons/Gold";
-import Leather from "./../icons/Leather";
-import Spice from "./../icons/Spice";
-import Silver from "./../icons/Silver";
-import Bonus3 from "./../icons/Bonus3";
-import Bonus4 from "./../icons/Bonus4";
-import Bonus5 from "./../icons/Bonus5";
-import Camel from "./../icons/Camel";
+import Diamond from "icons/Diamond";
+import Cloth from "icons/Cloth";
+import Gold from "icons/Gold";
+import Leather from "icons/Leather";
+import Spice from "icons/Spice";
+import Silver from "icons/Silver";
+import Bonus3 from "icons/Bonus3";
+import Bonus4 from "icons/Bonus4";
+import Bonus5 from "icons/Bonus5";
+import Camel from "icons/Camel";
 
 const components = {
   cloth: Cloth,
