@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import tokens from "../data/tokens";
-import shuffle from "lodash/shuffle";
+import startingTokens from "../data/tokens";
+import { cloneDeep, shuffle } from "lodash";
 
 import Button from "Button";
 import Tokens from "Tokens";
@@ -16,6 +16,8 @@ class App extends Component {
       { name: "Player 1", score: 0 },
       { name: "Player 2", score: 0 }
     ];
+
+    const tokens = cloneDeep(startingTokens);
 
     // Randomize bonus tokens.
     tokens.bonus.bonus3 = shuffle(tokens.bonus.bonus3);
@@ -56,8 +58,8 @@ class App extends Component {
       return;
     }
 
-    let players = Object.assign([], this.state.players);
-    let tokensObj = Object.assign([], this.state.tokens);
+    let players = cloneDeep(this.state.players);
+    let tokensObj = cloneDeep(this.state.tokens);
     let tokens = tokensObj[tokensKey];
 
     // Pop first token off of token stack & set state
@@ -68,7 +70,7 @@ class App extends Component {
       players[currentPlayer].score + parseInt(tokenValue, 10);
 
     this.setState({ players });
-    this.setState({ tokensObj });
+    this.setState({ tokens: tokensObj });
   }
 
   calculateScore() {
