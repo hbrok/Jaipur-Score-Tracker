@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: #222;
   font-family: "Work Sans", Arial, sans-serif;
 }
 
@@ -7,6 +7,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #eee;
   text-align: center;
 }
 
