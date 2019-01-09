@@ -1,41 +1,41 @@
 .button {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0 1rem 0;
-    font-family: inherit;
-    padding: 0.85em 1em;
-    -webkit-appearance: none;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-    transition: background-color 0.25s ease-out, color 0.25s ease-out;
-    font-size: 0.9rem;
-    line-height: 1;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    background-color: #4A90E2;
-    color: #fefefe;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.85em 1em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color: #419e93;
+  color: #fefefe;
 }
 
 .button:hover,
 .button:focus {
-    background-color: #3B74B8;
-    color: #fefefe;
+  background-color: #398c83;
+  color: #fefefe;
 }
 
 .button[disabled] {
-    opacity: .3;
-    background-color: #C6C6C6;
+  opacity: 0.3;
+  background-color: #c6c6c6;
 }
 
 .button.secondary {
-    background-color: #E24A4A;
-    color: #fefefe;
+  background-color: #e24a4a;
+  color: #fefefe;
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
-    background-color: #AE3838;
-    color: #fefefe;
+  background-color: #ae3838;
+  color: #fefefe;
 }

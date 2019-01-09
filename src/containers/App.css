@@ -1,5 +1,5 @@
 body {
-  background-color: #222;
+  background-color: #3fa49f;
   font-family: "Work Sans", Arial, sans-serif;
 }
 
@@ -16,7 +16,7 @@ body {
 .App-header {
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #222;
+  background-color: #21867c;
   color: white;
 }
 .App-header h1 {
@@ -35,7 +35,7 @@ body {
   align-items: center;
   margin-bottom: 0;
   padding: 0.75rem;
-  background-color: teal;
+  background-color: #21867c;
   border-radius: 0;
 }
 
@@ -48,7 +48,7 @@ body {
 
 .App-toolbar button:active,
 .App-toolbar button:hover {
-  background-color: darkblue;
+  background-color: #1e7970;
 }
 
 .App-toolbar button:first-child {
