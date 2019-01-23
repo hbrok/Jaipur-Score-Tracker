@@ -29,159 +29,90 @@
   -webkit-appearance: none;
   box-shadow: -1px 0px 4px -1px rgba($black, 0.5);
   font-size: 11px;
+
+  &.-diamond {
+    background-color: $monza;
+  }
+
+  &.-cloth {
+    background-color: $violet-eggplant;
+  }
+
+  &.-silver {
+    background-color: $juniper;
+  }
+
+  &.-gold {
+    background-color: $orange-peel;
+  }
+
+  &.-spice {
+    background-color: $green-haze;
+  }
+
+  &.-leather {
+    background-color: $old-copper;
+  }
+
+  &.-bonus3,
+  &.-bonus4,
+  &.-bonus5 {
+    background-color: $metallic-bronze;
+  }
+
+  &.-camel {
+    background-color: $eastern-blue;
+  }
 }
 
-.tokens-goods .token:nth-child(1) {
-  position: absolute;
+$tokens-goods-spacing: 20px !default;
+$tokens-bonus-spacing: 8px !default;
+
+.tokens-goods {
+  @for $i from 1 through 9 {
+    .token:nth-child(#{$i}) {
+      position: absolute;
+      left: ($tokens-goods-spacing * $i) - $tokens-goods-spacing;
+      z-index: #{$i};
+    }
+  }
 }
 
-.tokens-goods .token:nth-child(2) {
-  position: absolute;
-  left: 20px;
-  z-index: 2;
-}
-
-.tokens-goods .token:nth-child(3) {
-  position: absolute;
-  left: 40px;
-  z-index: 3;
-}
-
-.tokens-goods .token:nth-child(4) {
-  position: absolute;
-  left: 60px;
-  z-index: 4;
-}
-
-.tokens-goods .token:nth-child(5) {
-  position: absolute;
-  left: 80px;
-  z-index: 5;
-}
-
-.tokens-goods .token:nth-child(6) {
-  position: absolute;
-  left: 100px;
-  z-index: 6;
-}
-
-.tokens-goods .token:nth-child(7) {
-  position: absolute;
-  left: 120px;
-  z-index: 7;
-}
-
-.tokens-goods .token:nth-child(8) {
-  position: absolute;
-  left: 140px;
-  z-index: 8;
-}
-
-.tokens-goods .token:nth-child(9) {
-  position: absolute;
-  left: 160px;
-  z-index: 9;
-}
-
-.tokens-bonus .token:nth-child(1) {
-  position: absolute;
-}
-
-.tokens-bonus .token:nth-child(2) {
-  position: absolute;
-  left: 8px;
-  z-index: 2;
-}
-
-.tokens-bonus .token:nth-child(3) {
-  position: absolute;
-  left: 16px;
-  z-index: 3;
-}
-
-.tokens-bonus .token:nth-child(4) {
-  position: absolute;
-  left: 24px;
-  z-index: 4;
-}
-
-.tokens-bonus .token:nth-child(5) {
-  position: absolute;
-  left: 32px;
-  z-index: 5;
-}
-
-.tokens-bonus .token:nth-child(6) {
-  position: absolute;
-  left: 40px;
-  z-index: 6;
-}
-
-.tokens-bonus .token:nth-child(7) {
-  position: absolute;
-  left: 48px;
-  z-index: 7;
-}
-
-.token.-diamond {
-  background-color: $monza;
-}
-
-.token.-cloth {
-  background-color: $violet-eggplant;
-}
-
-.token.-silver {
-  background-color: $juniper;
-}
-
-.token.-gold {
-  background-color: $orange-peel;
-}
-
-.token.-spice {
-  background-color: $green-haze;
-}
-
-.token.-leather {
-  background-color: $old-copper;
-}
-
-.token.-bonus3,
-.token.-bonus4,
-.token.-bonus5 {
-  background-color: $metallic-bronze;
-}
-
-.token.-camel {
-  background-color: $eastern-blue;
+.tokens-bonus {
+  @for $i from 1 through 7 {
+    .token:nth-child(#{$i}) {
+      position: absolute;
+      left: ($tokens-bonus-spacing * $i) - $tokens-bonus-spacing;
+      z-index: #{$i};
+    }
+  }
 }
 
 .token-value {
   position: absolute;
-}
 
-.token-value.-left {
-  top: 43%;
-  left: 6px;
-  transform: rotate(90deg);
-}
+  &.-left {
+    top: 43%;
+    left: 6px;
+    transform: rotate(90deg);
+  }
 
-.token-value.-right {
-  top: 43%;
-  right: 6px;
-  transform: rotate(270deg);
-}
+  &.-right {
+    top: 43%;
+    right: 6px;
+    transform: rotate(270deg);
+  }
 
-.token-value.-top {
-  left: 45%;
-  top: 4px;
-  transform: rotate(180deg);
-}
+  &.-top {
+    left: 45%;
+    top: 4px;
+    transform: rotate(180deg);
+  }
 
-.token-value.-bottom {
-  left: 45%;
-  bottom: 4px;
+  &.-bottom {
+    left: 45%;
+    bottom: 4px;
+  }
 }
 
 .token svg {

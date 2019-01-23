@@ -9,12 +9,12 @@
   align-content: space-around;
   padding: 1rem;
   width: 50%;
-}
 
-.player * {
-  margin-bottom: 0.5rem;
-}
+  * {
+    margin-bottom: 0.5rem;
 
-.player *:last-child {
-  margin: 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
 }

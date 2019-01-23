@@ -16,16 +16,16 @@
   cursor: pointer;
   background-color: $keppel;
   color: $white;
-}
 
-.button:hover,
-.button:focus {
-  background-color: darken($keppel, 2%);
-  color: $white;
-}
+  &:hover,
+  &:focus {
+    background-color: darken($keppel, 2%);
+    color: $white;
+  }
 
-.button[disabled] {
-  opacity: 0.3;
-  background-color: $gallery;
-  color: $black;
+  &[disabled] {
+    opacity: 0.3;
+    background-color: $gallery;
+    color: $black;
+  }
 }
