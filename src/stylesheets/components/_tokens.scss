@@ -21,13 +21,13 @@
   width: 75px;
   height: 75px;
   position: relative;
-  background-color: grey;
+  background-color: $black;
   border-radius: 50%;
   border: 0;
-  font-family: "Work Sans", sans-serif;
-  color: white;
+  font-family: $text-font-stack;
+  color: $white;
   -webkit-appearance: none;
-  box-shadow: -1px 0px 4px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 0px 4px -1px rgba($black, 0.5);
   font-size: 11px;
 }
 
@@ -124,37 +124,37 @@
 }
 
 .token.-diamond {
-  background-color: #e2071e;
+  background-color: $monza;
 }
 
 .token.-cloth {
-  background-color: #9f0d7f;
+  background-color: $violet-eggplant;
 }
 
 .token.-silver {
-  background-color: #62828a;
+  background-color: $juniper;
 }
 
 .token.-gold {
-  background-color: #f09a00;
+  background-color: $orange-peel;
 }
 
 .token.-spice {
-  background-color: #029749;
+  background-color: $green-haze;
 }
 
 .token.-leather {
-  background-color: #755832;
+  background-color: $old-copper;
 }
 
 .token.-bonus3,
 .token.-bonus4,
 .token.-bonus5 {
-  background-color: #59411c;
+  background-color: $metallic-bronze;
 }
 
 .token.-camel {
-  background-color: #1f9aaa;
+  background-color: $eastern-blue;
 }
 
 .token-value {
@@ -188,5 +188,5 @@
   margin-top: 1.4rem;
   width: 2.75em;
   height: 2.75em;
-  fill: #fff;
+  fill: $white;
 }

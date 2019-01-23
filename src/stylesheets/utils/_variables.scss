@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: "Work Sans", Arial, sans-serif !default;
+
+/// White
+/// @type Color
+$white: #fefefe;
+
+/// Black
+/// @type Color
+$black: #222;
+
+/// Gallery
+/// @type Color
+$gallery: #eee;
+
+/// Keppel
+/// @type Color
+$keppel: #3fa49f;
+
+/// Elm
+/// @type Color
+$elm: #21867c;
+
+/// Monza - Diamonds
+/// @type Color
+$monza: #e2071e;
+
+/// Violet eggplant - Cloth
+/// @type Color
+$violet-eggplant: #9f0d7f;
+
+/// Juniper - Silver
+/// @type Color
+$juniper: #62828a;
+
+/// Orange peel - Gold
+/// @type Color
+$orange-peel: #f09a00;
+
+/// Green haze - Spices
+/// @type Color
+$green-haze: #029749;
+
+/// Old copper - Leather
+/// @type Color
+$old-copper: #755832;
+
+/// Metallic bronze - Bonus
+/// @type Color
+$metallic-bronze: #59411c;
+
+/// Eastern blue - Camel
+/// @type Color
+$eastern-blue: #1f9aaa;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 500px !default;

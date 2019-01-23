@@ -1,1 +1,8 @@
-@import "components/all";
+// Utilities
+@import "utils/variables";
+
+// Components
+@import "components/app";
+@import "components/button";
+@import "components/player";
+@import "components/tokens";

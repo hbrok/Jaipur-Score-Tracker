@@ -14,28 +14,29 @@
   font-weight: bold;
   text-align: center;
   cursor: pointer;
-  background-color: #419e93;
-  color: #fefefe;
+  background-color: $keppel;
+  color: $white;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #398c83;
-  color: #fefefe;
+  background-color: darken($keppel, 2%);
+  color: $white;
 }
 
 .button[disabled] {
   opacity: 0.3;
-  background-color: #c6c6c6;
+  background-color: $gallery;
+  color: $black;
 }
 
 .button.secondary {
   background-color: #e24a4a;
-  color: #fefefe;
+  color: $white;
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
   background-color: #ae3838;
-  color: #fefefe;
+  color: $white;
 }
