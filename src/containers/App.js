@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./App.css";
+import "stylesheets/main.scss";
+
 import startingTokens from "../data/tokens";
 import { cloneDeep, shuffle } from "lodash";
 

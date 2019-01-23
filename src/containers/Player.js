@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Player.css";
 
 import Button from "components/Button";
 

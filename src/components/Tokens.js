@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Tokens.css";
 
 import Diamond from "icons/Diamond";
 import Cloth from "icons/Cloth";
