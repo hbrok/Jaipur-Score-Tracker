@@ -41,28 +41,28 @@ class Token extends Component {
 
   renderTokens() {
     const { name, values, onClick } = this.props;
-    const Icon = components[name];
 
     return values.map((value, i) => {
       const displayValue = this.displayValue(name, value);
 
       return (
         <div key={i} className={`token -${name}`} onClick={onClick}>
-          <Icon />
-
-          <div className="token-value -right">{displayValue}</div>
-          <div className="token-value -left">{displayValue}</div>
-          <div className="token-value -top">{displayValue}</div>
-          <div className="token-value -bottom">{displayValue}</div>
+          <div className="token-value">{displayValue}</div>
         </div>
       );
     });
   }
 
   render() {
-    const { onClick } = this.props;
+    const { name, onClick } = this.props;
+    const Icon = components[name];
 
-    return <div className={`token-wrapper`}>{this.renderTokens()}</div>;
+    return (
+      <div className={`token-wrapper -${name}`}>
+        <Icon />
+        {this.renderTokens()}
+      </div>
+    );
   }
 }
 

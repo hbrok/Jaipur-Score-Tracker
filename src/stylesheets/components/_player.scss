@@ -1,20 +1,21 @@
-.player-container {
-  display: flex;
-  margin-top: auto;
-}
-
 .player {
   display: flex;
-  flex-direction: column;
-  align-content: space-around;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem;
-  width: 50%;
 
   * {
-    margin-bottom: 0.5rem;
-
-    &:last-child {
-      margin: 0;
-    }
+    flex-basis: calc(100% / 3);
   }
+}
+
+.player-name {
+  font-size: 18px;
+  color: $scorpion;
+  font-weight: bold;
+}
+
+.player button {
+  width: 100%;
+  margin-bottom: 0;
 }

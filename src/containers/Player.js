@@ -13,12 +13,12 @@ class Player extends Component {
     let score = "";
 
     if (showScore) {
-      score = <div>Score: {player.score}</div>;
+      score = <div>{player.score} points</div>;
     }
 
     return (
       <div className="player">
-        <div>{player.name}</div>
+        <div className="player-name">{player.name}</div>
         {score}
         <Button
           text={this.isActivePlayer() ? "End Sell" : "Sell"}

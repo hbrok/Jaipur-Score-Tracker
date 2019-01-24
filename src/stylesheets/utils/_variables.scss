@@ -4,60 +4,64 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Work Sans", Arial, sans-serif !default;
+$text-font-stack: "Roboto Condensed", Arial, sans-serif !default;
 
 /// White
 /// @type Color
 $white: #fefefe;
 
-/// Black
-/// @type Color
-$black: #222;
-
 /// Gallery
 /// @type Color
 $gallery: #eee;
 
-/// Keppel
+/// Wild sand
 /// @type Color
-$keppel: #3fa49f;
+$wild-sand: #f4f4f4;
 
-/// Elm
+/// Black
 /// @type Color
-$elm: #21867c;
+$black: #222;
+
+/// Body text color
+/// @type Color
+$scorpion: #565656;
+
+/// Pacific blue
+/// @type Color
+$pacific-blue: #03a9c5;
 
 /// Monza - Diamonds
 /// @type Color
-$monza: #e2071e;
+$monza: #d0021b;
 
-/// Violet eggplant - Cloth
+/// Cloth
 /// @type Color
-$violet-eggplant: #9f0d7f;
+$purple-heart: #af1acd;
 
-/// Juniper - Silver
+/// Silver
 /// @type Color
-$juniper: #62828a;
+$slate-gray: #6f7f92;
 
-/// Orange peel - Gold
+/// Gold
 /// @type Color
-$orange-peel: #f09a00;
+$buttercup: #f5a623;
 
-/// Green haze - Spices
+/// Spices
 /// @type Color
-$green-haze: #029749;
+$vida-loca: #63a11b;
 
-/// Old copper - Leather
+/// Leather
 /// @type Color
-$old-copper: #755832;
-
-/// Metallic bronze - Bonus
-/// @type Color
-$metallic-bronze: #59411c;
-
-/// Eastern blue - Camel
-/// @type Color
-$eastern-blue: #1f9aaa;
+$mule-fawn: #8b572a;
 
 /// Container's maximum width
 /// @type Length
 $max-width: 500px !default;
+
+/// Default value for box shadow
+/// @type String
+$global-box-shadow: 0 2px 4px 0 rgba($black, 0.1);
+
+/// Default value for border radius
+/// @type String
+$global-border-radius: 8px;

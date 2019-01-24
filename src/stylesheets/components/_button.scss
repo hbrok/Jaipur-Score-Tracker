@@ -14,12 +14,12 @@
   font-weight: bold;
   text-align: center;
   cursor: pointer;
-  background-color: $keppel;
+  background-color: $pacific-blue;
   color: $white;
 
   &:hover,
   &:focus {
-    background-color: darken($keppel, 2%);
+    background-color: darken($pacific-blue, 2%);
     color: $white;
   }
 

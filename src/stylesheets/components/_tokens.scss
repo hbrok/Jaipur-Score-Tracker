@@ -1,123 +1,64 @@
+$token-colors: (
+  diamond: $monza,
+  cloth: $purple-heart,
+  silver: $slate-gray,
+  gold: $buttercup,
+  spice: $vida-loca,
+  leather: $mule-fawn,
+  bonus3: $pacific-blue,
+  bonus4: $pacific-blue,
+  bonus5: $pacific-blue,
+  camel: $pacific-blue
+);
+
 .tokens-container {
   width: 100%;
 }
 
 .token-wrapper {
-  height: 75px;
-  position: relative;
-  margin: 0 0.25rem 1rem 0.25rem;
-}
-
-.tokens-bonus {
   display: flex;
-  flex-direction: row;
-}
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0.25rem 1rem 0.25rem;
+  padding: 20px 12px;
+  background-color: $white;
+  box-shadow: $global-box-shadow;
+  border-radius: $global-border-radius;
 
-.tokens-bonus .token-wrapper {
-  width: 25%;
+  svg {
+    margin-right: 8px;
+    width: 3.75em;
+    height: 3.75em;
+  }
+
+  @each $name, $color in $token-colors {
+    &.-#{$name} {
+      fill: $color;
+    }
+  }
 }
 
 .token {
-  width: 75px;
-  height: 75px;
   position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 3px;
   background-color: $black;
-  border-radius: 50%;
   border: 0;
+  border-radius: $global-border-radius;
+  box-shadow: $global-box-shadow;
   font-family: $text-font-stack;
   color: $white;
   -webkit-appearance: none;
-  box-shadow: -1px 0px 4px -1px rgba($black, 0.5);
-  font-size: 11px;
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 
-  &.-diamond {
-    background-color: $monza;
-  }
-
-  &.-cloth {
-    background-color: $violet-eggplant;
-  }
-
-  &.-silver {
-    background-color: $juniper;
-  }
-
-  &.-gold {
-    background-color: $orange-peel;
-  }
-
-  &.-spice {
-    background-color: $green-haze;
-  }
-
-  &.-leather {
-    background-color: $old-copper;
-  }
-
-  &.-bonus3,
-  &.-bonus4,
-  &.-bonus5 {
-    background-color: $metallic-bronze;
-  }
-
-  &.-camel {
-    background-color: $eastern-blue;
-  }
-}
-
-$tokens-goods-spacing: 20px !default;
-$tokens-bonus-spacing: 8px !default;
-
-.tokens-goods {
-  @for $i from 1 through 9 {
-    .token:nth-child(#{$i}) {
-      position: absolute;
-      left: ($tokens-goods-spacing * $i) - $tokens-goods-spacing;
-      z-index: #{$i};
+  @each $name, $color in $token-colors {
+    &.-#{$name} {
+      background-color: $color;
     }
   }
-}
-
-.tokens-bonus {
-  @for $i from 1 through 7 {
-    .token:nth-child(#{$i}) {
-      position: absolute;
-      left: ($tokens-bonus-spacing * $i) - $tokens-bonus-spacing;
-      z-index: #{$i};
-    }
-  }
-}
-
-.token-value {
-  position: absolute;
-
-  &.-left {
-    top: 43%;
-    left: 6px;
-    transform: rotate(90deg);
-  }
-
-  &.-right {
-    top: 43%;
-    right: 6px;
-    transform: rotate(270deg);
-  }
-
-  &.-top {
-    left: 45%;
-    top: 4px;
-    transform: rotate(180deg);
-  }
-
-  &.-bottom {
-    left: 45%;
-    bottom: 4px;
-  }
-}
-
-.token svg {
-  margin-top: 1.4rem;
-  width: 2.75em;
-  height: 2.75em;
-  fill: $white;
 }
