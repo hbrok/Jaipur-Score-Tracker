@@ -5,6 +5,7 @@ import startingTokens from "../data/tokens";
 import { cloneDeep, shuffle } from "lodash";
 
 import Button from "components/Button";
+import Divider from "components/Divider";
 import Tokens from "components/Tokens";
 import Player from "containers/Player";
 import Trophy from "icons/Trophy";
@@ -129,14 +130,17 @@ class App extends Component {
         </header>
 
         <div className="tokens-container">
+          <Divider>Goods</Divider>
           <div className="tokens-goods">{this.renderTokensRow("goods")}</div>
 
+          <Divider>Bonus</Divider>
           <div className="tokens-bonus">
             {this.renderTokensRow("bonus")}
             {this.renderTokensRow("camel")}
           </div>
         </div>
 
+        <Divider>Players</Divider>
         <div className="player-container">
           {this.state.players.map((player, i) => {
             return (
@@ -152,6 +156,7 @@ class App extends Component {
           })}
         </div>
 
+        <Divider />
         <div className="App-toolbar">
           <Button onClick={() => this.calculateScore()}>
             <Trophy />

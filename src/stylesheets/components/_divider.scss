@@ -1,0 +1,22 @@
+.Divider {
+  display: flex;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Divider-bar {
+  position: relative;
+  width: 100%;
+  margin: 0 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    background-color: darken($wild-sand, 15%);
+  }
+}
