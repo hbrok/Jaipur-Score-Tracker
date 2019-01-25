@@ -7,12 +7,30 @@
   * {
     flex-basis: calc(100% / 3);
   }
+
+  *:nth-child(2) {
+    text-align: center;
+  }
 }
 
+// 1. Make sure text doesn't cover icon.
 .player-name {
-  font-size: 18px;
+  position: relative;
+  padding: 6px;
+  padding-right: 1.25em; // 1
+  border-bottom: 2px dashed lighten($scorpion, 40%);
   color: $scorpion;
+  font-size: 18px;
   font-weight: bold;
+
+  svg {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    right: 0;
+    pointer-events: none;
+    fill: lighten($scorpion, 40%);
+  }
 }
 
 .player button {

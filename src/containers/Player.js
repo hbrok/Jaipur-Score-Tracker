@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Button from "components/Button";
+import Pencil from "icons/Pencil";
 
 class Player extends Component {
   isActivePlayer() {
@@ -18,7 +19,10 @@ class Player extends Component {
 
     return (
       <div className="player">
-        <div className="player-name">{player.name}</div>
+        <div className="player-name" contentEditable>
+          {player.name}
+          <Pencil />
+        </div>
         {score}
         <Button
           text={this.isActivePlayer() ? "End Sell" : "Sell"}
