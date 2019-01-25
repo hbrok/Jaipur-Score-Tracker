@@ -9,3 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [towel](https://thenounproject.com/term/towel/810780/) by Geovani Almeida from the Noun Project
 - [sack](https://thenounproject.com/search/?q=spice&i=1007552) by Juraj Sedlák from the Noun Project
 - [Camel](https://thenounproject.com/term/camel/1985651/) by supalerk laipawat from the Noun Project
+- [Trophy](https://thenounproject.com/icon/825992/) by Oksana Latysheva, UA from the Noun Project
+- [restart](https://thenounproject.com/icon/1921248/) by Rose Alice Design from the Noun Project
+- [Pencil](https://thenounproject.com/icon/10872/) by Thomas Le Bas, NZ from the Noun Project
